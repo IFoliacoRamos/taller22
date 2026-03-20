@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>Canva Triángulo</title>
+
+<style>
+
+body{
+font-family: Arial;
+}
+
+.container{
+display:flex;
+gap:40px;
+align-items:flex-start;
+}
+
+canvas{
+border:1px solid black;
+}
+
+input{
+width:60px;
+margin-bottom:5px;
+}
+
+#resultado{
+font-weight:bold;
+margin-top:10px;
+}
+
+</style>
+</head>
+
+<body>
+
+<h2>3 puntos, 1 triangulo?</h2>
+
+<div class="container">
+
+<div>
+
+<h3>Digite los 3 puntos</h3>
+
+P1<br>
+x <input id="x1" type="number">
+y <input id="y1" type="number"><br><br>
+
+P2<br>
+x <input id="x2" type="number">
+y <input id="y2" type="number"><br><br>
+
+P3<br>
+x <input id="x3" type="number">
+y <input id="y3" type="number"><br><br>
+
+Método de línea<br>
+<select id="method">
+<option value="dda">DDA</option>
+<option value="bresenham">Bresenham</option>
+</select>
+
+<br><br>
+
+<button onclick="procesar()">Calcular y Dibujar</button>
+
+<h3 id="resultado"></h3>
+
+</div>
+
+<canvas id="canvas" width="500" height="500"></canvas>
+
+</div>
+
+<script src="6014449_v1.js"></script>
+
+</body>
+</html>
